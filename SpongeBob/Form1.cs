@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace SpongeBob
 {
-    //test 2
     public partial class Form1 : Form
     {
         public Form1()
