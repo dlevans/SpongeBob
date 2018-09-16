@@ -43,11 +43,10 @@ namespace SpongeBob
 
         string reverse(string input)
         {
-            char[] text = input.ToCharArray();
             string newstring = "";
-            for (int i = text.Length - 1; i > -1; i--)
+            for (int i = input.Length - 1; i > -1; i--)
             {
-                newstring += text[i].ToString();
+                newstring += input[i].ToString();
             }
             input = newstring;
             return input;
@@ -55,17 +54,16 @@ namespace SpongeBob
 
         string manipulate(string input)
         {
-            char[] text = input.ToCharArray();
             string newstring = "";
-            for (int i = 0; i < text.Length; i++)
+            for (int i = 0; i < input.Length; i++)
             {
                 if(i%2 == 0)
                 {
-                    newstring += text[i].ToString().ToUpper();
+                    newstring += input[i].ToString().ToUpper();
                 }
                 else
                 {
-                    newstring += text[i].ToString().ToLower();
+                    newstring += input[i].ToString().ToLower();
                 }
             }
             input = newstring;
@@ -74,17 +72,16 @@ namespace SpongeBob
 
         string minout(string input)
         {
-            char[] text = input.ToCharArray();
             string newstring = "";
-            for (int i = 0; i < text.Length; i++)
+            for (int i = 0; i < input.Length; i++)
             {
-                if (text[i] == ' ')
+                if (input[i] == ' ')
                 {
-                    newstring += text[i-1].ToString() + "oy ";
+                    newstring += input[i-1].ToString() + "oy ";
                 }
                 else
                 {
-                    newstring += text[i].ToString();
+                    newstring += input[i].ToString();
                 }
             }
             input = newstring + "oy";
